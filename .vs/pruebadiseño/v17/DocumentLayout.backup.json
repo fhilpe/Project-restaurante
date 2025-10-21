@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\luiss\\source\\repos\\pruebadise\u00F1o\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A68DA333-5D53-4D16-8729-FC184C311FC5}|pruebadise\u00F1o.csproj|c:\\users\\luiss\\source\\repos\\pruebadise\u00F1o\\formularios\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A68DA333-5D53-4D16-8729-FC184C311FC5}|pruebadise\u00F1o.csproj|solutionrelative:formularios\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A68DA333-5D53-4D16-8729-FC184C311FC5}|pruebadise\u00F1o.csproj|c:\\users\\luiss\\source\\repos\\pruebadise\u00F1o\\formularios\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A68DA333-5D53-4D16-8729-FC184C311FC5}|pruebadise\u00F1o.csproj|solutionrelative:formularios\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Inicio.cs",
+              "DocumentMoniker": "C:\\Users\\luiss\\source\\repos\\pruebadise\u00F1o\\Formularios\\Inicio.cs",
+              "RelativeDocumentMoniker": "Formularios\\Inicio.cs",
+              "ToolTip": "C:\\Users\\luiss\\source\\repos\\pruebadise\u00F1o\\Formularios\\Inicio.cs",
+              "RelativeToolTip": "Formularios\\Inicio.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAcwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T05:09:59.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Inicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\luiss\\source\\repos\\pruebadise\u00F1o\\Formularios\\Inicio.cs",
+              "RelativeDocumentMoniker": "Formularios\\Inicio.cs",
+              "ToolTip": "C:\\Users\\luiss\\source\\repos\\pruebadise\u00F1o\\Formularios\\Inicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Inicio.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T05:09:56.462Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
