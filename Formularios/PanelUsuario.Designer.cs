@@ -63,6 +63,9 @@
             // btnCerrarCuenta
             // 
             this.btnCerrarCuenta.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCerrarCuenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrarCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnCerrarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarCuenta.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
             this.btnCerrarCuenta.IconColor = System.Drawing.Color.Black;
             this.btnCerrarCuenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -135,7 +138,7 @@
             // 
             // dgvReservasUsuario
             // 
-            this.dgvReservasUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvReservasUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservasUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservasUsuario.Location = new System.Drawing.Point(16, 164);
             this.dgvReservasUsuario.Name = "dgvReservasUsuario";

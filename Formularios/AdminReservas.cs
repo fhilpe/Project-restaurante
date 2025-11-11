@@ -23,19 +23,35 @@ namespace pruebadiseño.Formularios
             refrescarPantalla();
             txtId.Enabled = false;
             LimpiarCampos();
+
+            // Cargar mesas disponibles
+            cbMesas.DataSource = ReservaDAL.ObtenerMesasDisponibles();
+            cbMesas.DisplayMember = "NumeroMesa";
+            cbMesas.ValueMember = "IdMesa";
         }
 
         private void dgvReservas_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvReservas.CurrentRow != null)
             {
-                txtId.Text = Convert.ToString(dgvReservas.CurrentRow.Cells["id"].Value);
-                txtNombre.Text = Convert.ToString(dgvReservas.CurrentRow.Cells["nombre"].Value);
-                txtCelular.Text = Convert.ToString(dgvReservas.CurrentRow.Cells["celular"].Value);
-                txtCorreo.Text = Convert.ToString(dgvReservas.CurrentRow.Cells["correo"].Value);
-                txtCantidad.Text = Convert.ToString(dgvReservas.CurrentRow.Cells["cantidad_personas"].Value);
-                dtpFecha.Text = Convert.ToString(dgvReservas.CurrentRow.Cells["fecha"].Value);
-                dtpHora.Text = Convert.ToString(dgvReservas.CurrentRow.Cells["hora"].Value);
+                // Índices: 0=id, 1=nombre, 2=celular, 3=correo, 4=cantidad_personas, 5=fecha, 6=hora, 7=id_cliente, 8=id_mesa
+                txtId.Text = Convert.ToString(dgvReservas.CurrentRow.Cells[0].Value);
+                txtNombre.Text = Convert.ToString(dgvReservas.CurrentRow.Cells[1].Value);
+                txtCelular.Text = Convert.ToString(dgvReservas.CurrentRow.Cells[2].Value);
+                txtCorreo.Text = Convert.ToString(dgvReservas.CurrentRow.Cells[3].Value);
+                txtCantidad.Text = Convert.ToString(dgvReservas.CurrentRow.Cells[4].Value);
+                dtpFecha.Text = Convert.ToString(dgvReservas.CurrentRow.Cells[5].Value);
+                dtpHora.Text = Convert.ToString(dgvReservas.CurrentRow.Cells[6].Value);
+
+                if (dgvReservas.CurrentRow.Cells[7].Value != DBNull.Value)
+                {
+                    cbMesas.SelectedValue = Convert.ToInt32(dgvReservas.CurrentRow.Cells[7].Value);
+                }
+                else
+                {
+                    cbMesas.SelectedIndex = -1;  // Ninguna seleccionada
+                }
+
             }
             else
             {
@@ -46,7 +62,7 @@ namespace pruebadiseño.Formularios
 
         public void refrescarPantalla()
         {
-            var reservas = ReservaDAL.MostrarRegistro();
+            var reservas = ReservaDAL.MostrarRegistroAdmin();
             //MessageBox.Show($"Reservas cargadas: {reservas.Count}");  
             dgvReservas.DataSource = reservas;
         }
@@ -60,6 +76,7 @@ namespace pruebadiseño.Formularios
             txtCantidad.SelectedIndex = -1;
             dtpFecha.Value = DateTime.Now;
             dtpHora.Value = DateTime.Now;
+            cbMesas.SelectedIndex = -1;
         }
 
         private void AdminReservas_Load_1(object sender, EventArgs e)
@@ -91,6 +108,7 @@ namespace pruebadiseño.Formularios
             reserva.cantidad_personas = int.Parse(txtCantidad.Text);
             reserva.fecha = dtpFecha.Value.Date;
             reserva.hora = dtpHora.Value.TimeOfDay;
+            reserva.id_mesa = (int)cbMesas.SelectedValue;
 
             int result = ReservaDAL.ModificarReserva(reserva);
             if (result > 0)
@@ -156,6 +174,8 @@ namespace pruebadiseño.Formularios
             reserva.cantidad_personas = int.Parse(txtCantidad.Text);
             reserva.fecha = dtpFecha.Value.Date;
             reserva.hora = dtpHora.Value.TimeOfDay;
+            reserva.id_mesa = (int)cbMesas.SelectedValue;
+
 
 
 

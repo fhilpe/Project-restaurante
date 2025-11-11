@@ -15,6 +15,7 @@ namespace pruebadiseño
         public int cantidad_personas { get; set; }
         public DateTime fecha { get; set; }
         public TimeSpan hora { get; set; }
+        public int id_mesa { get; set; }
 
         public Reserva() { }
 
@@ -27,6 +28,7 @@ namespace pruebadiseño
             this.cantidad_personas = cantidad_personas;
             this.fecha = fecha;
             this.hora = hora;
+            this.id_mesa = id_mesa;
         }
 
 

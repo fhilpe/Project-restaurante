@@ -49,10 +49,10 @@ namespace pruebadiseño
                 DisableButton();
                 // Botón
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
-                currentBtn.ForeColor = color;
+                currentBtn.BackColor = Color.FromArgb(34,22,39);        //Color fondo cuando se activa
+                currentBtn.ForeColor = color;                           //color letras cuando se activa
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = color;
+                currentBtn.IconColor = color;                           //color icono cuando se activa
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
 
@@ -69,9 +69,9 @@ namespace pruebadiseño
             if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.FromArgb(212, 175, 55);
-                currentBtn.ForeColor = Color.Gainsboro;
+                currentBtn.ForeColor = Color.FromArgb(10,0,0);  //color letras despues de usarse
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.Gainsboro;
+                currentBtn.IconColor = Color.FromArgb(10,0,0);  //color icono despues de usarse
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }

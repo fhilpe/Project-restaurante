@@ -52,9 +52,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(255, 176);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 38;
-            this.label1.Text = "Usuario:";
+            this.label1.Text = "Correo:";
             // 
             // label2
             // 
@@ -71,15 +71,16 @@
             this.txtCorreo.Location = new System.Drawing.Point(258, 192);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(199, 24);
-            this.txtCorreo.TabIndex = 40;
+            this.txtCorreo.TabIndex = 10;
             // 
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(258, 258);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(199, 24);
-            this.txtContraseña.TabIndex = 41;
+            this.txtContraseña.TabIndex = 20;
             // 
             // btnLogin
             // 
@@ -90,7 +91,7 @@
             this.btnLogin.Location = new System.Drawing.Point(258, 319);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(199, 33);
-            this.btnLogin.TabIndex = 42;
+            this.btnLogin.TabIndex = 30;
             this.btnLogin.Text = "Acceder";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -101,7 +102,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(310, 391);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(89, 13);
-            this.linkLabel1.TabIndex = 43;
+            this.linkLabel1.TabIndex = 40;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Crear una cuenta";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
