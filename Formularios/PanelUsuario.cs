@@ -70,5 +70,17 @@ namespace pruebadiseño.Formularios
                 CargarReservasUsuario();
             }
         }
+
+        private void btnVerMenu_Click(object sender, EventArgs e)
+        {          
+            this.Hide();
+            mainForm.OpenChildFrom(new MenuUsuario());
+        }
+
+        private void btnVerPedidos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainForm.OpenChildFrom(new VerPedidos());
+        }
     }
 }

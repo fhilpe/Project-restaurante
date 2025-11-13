@@ -19,3 +19,8 @@ C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.Ad
 C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.PanelUsuario.resources
 C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.AdminReservas.resources
 C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.AdminUsuarios.resources
+C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.MenuAdmin.resources
+C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.MenuUsuario.resources
+C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.HacerPedido.resources
+C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.AdminPedidos.resources
+C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.VerPedidos.resources

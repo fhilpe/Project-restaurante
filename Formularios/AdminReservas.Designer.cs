@@ -51,7 +51,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.cbBuscarPor = new System.Windows.Forms.ComboBox();
-            this.cbMesas = new System.Windows.Forms.ComboBox();
+            this.cbMesa = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             this.SuspendLayout();
@@ -235,6 +235,7 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(110, 24);
             this.dtpFecha.TabIndex = 5;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // dtpHora
             // 
@@ -246,10 +247,12 @@
             this.dtpHora.ShowUpDown = true;
             this.dtpHora.Size = new System.Drawing.Size(112, 24);
             this.dtpHora.TabIndex = 6;
+            this.dtpHora.ValueChanged += new System.EventHandler(this.dtpHora_ValueChanged);
             // 
             // txtCantidad
             // 
             this.txtCantidad.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtCantidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.FormattingEnabled = true;
             this.txtCantidad.Items.AddRange(new object[] {
@@ -303,17 +306,18 @@
             this.cbBuscarPor.Size = new System.Drawing.Size(100, 21);
             this.cbBuscarPor.TabIndex = 103;
             // 
-            // cbMesas
+            // cbMesa
             // 
-            this.cbMesas.FormattingEnabled = true;
-            this.cbMesas.Items.AddRange(new object[] {
+            this.cbMesa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMesa.FormattingEnabled = true;
+            this.cbMesa.Items.AddRange(new object[] {
             "1",
             "2",
             "3"});
-            this.cbMesas.Location = new System.Drawing.Point(621, 356);
-            this.cbMesas.Name = "cbMesas";
-            this.cbMesas.Size = new System.Drawing.Size(55, 21);
-            this.cbMesas.TabIndex = 104;
+            this.cbMesa.Location = new System.Drawing.Point(621, 356);
+            this.cbMesa.Name = "cbMesa";
+            this.cbMesa.Size = new System.Drawing.Size(55, 21);
+            this.cbMesa.TabIndex = 104;
             // 
             // label9
             // 
@@ -330,7 +334,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 441);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cbMesas);
+            this.Controls.Add(this.cbMesa);
             this.Controls.Add(this.cbBuscarPor);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
@@ -388,7 +392,7 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.ComboBox cbBuscarPor;
-        private System.Windows.Forms.ComboBox cbMesas;
+        private System.Windows.Forms.ComboBox cbMesa;
         private System.Windows.Forms.Label label9;
     }
 }

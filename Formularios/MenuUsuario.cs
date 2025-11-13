@@ -8,17 +8,18 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pruebadiseño;
 
-namespace pruebadiseño
+namespace pruebadiseño.Formularios
 {
-    public partial class Menu : Form
+    public partial class MenuUsuario : Form
     {
-        public Menu()
+        public MenuUsuario()
         {
             InitializeComponent();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void MenuUsuario_Load(object sender, EventArgs e)
         {
             this.dgvMenu.SelectionChanged += new System.EventHandler(this.dgvMenu_SelectionChanged);
             CargarCategorias();  // Primero llena el ComboBox
@@ -26,7 +27,7 @@ namespace pruebadiseño
             CargarMenu();  // Finalmente carga menú
         }
 
-
+       
 
         private void CargarMenu()
         {
@@ -54,7 +55,25 @@ namespace pruebadiseño
             }
         }
 
-     
+        private void btnAgregarPedido_Click(object sender, EventArgs e)
+        {
+            if (dgvMenu.CurrentRow == null) return;
+            int idProducto = Convert.ToInt32(dgvMenu.CurrentRow.Cells["IdProducto"].Value);
+            string nombre = Convert.ToString(dgvMenu.CurrentRow.Cells["Nombre"].Value);
+            decimal precio = Convert.ToDecimal(dgvMenu.CurrentRow.Cells["Precio"].Value);
+            // Agrega o incrementa cantidad
+            var existente = Carrito.Items.Find(d => d.IdProducto == idProducto);
+            if (existente != null)
+            {
+                existente.Cantidad++;
+            }
+            else
+            {
+                Carrito.Items.Add(new DetallePedido { IdProducto = idProducto, Cantidad = 1, PrecioUnitario = precio });
+            }
+            Carrito.Total += precio;
+            MessageBox.Show($"Agregado: {nombre}");
+        }
 
         private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -115,7 +134,21 @@ namespace pruebadiseño
             }
         }
 
-        
+        public static class Carrito
+        {
+            public static List<DetallePedido> Items = new List<DetallePedido>();
+            public static decimal Total = 0;
+        }
+
+        private void btnIrCarrito_Click(object sender, EventArgs e)
+        {
+            HacerPedido hacerPedido = new HacerPedido();
+            this.Hide();
+            hacerPedido.Show();
+        }
+
+
+
 
         // fin
     }

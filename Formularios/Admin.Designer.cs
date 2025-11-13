@@ -31,10 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnOpenMenu = new System.Windows.Forms.Button();
             this.btnOpenBooking = new System.Windows.Forms.Button();
             this.btnOpenUsers = new System.Windows.Forms.Button();
             this.panelPadreAdmin = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnOpenPedidos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,13 +61,15 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.btnOpenPedidos, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnOpenMenu, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnOpenBooking, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnOpenUsers, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 40);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -75,12 +78,23 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(748, 30);
             this.tableLayoutPanel1.TabIndex = 63;
             // 
+            // btnOpenMenu
+            // 
+            this.btnOpenMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOpenMenu.Location = new System.Drawing.Point(377, 3);
+            this.btnOpenMenu.Name = "btnOpenMenu";
+            this.btnOpenMenu.Size = new System.Drawing.Size(181, 24);
+            this.btnOpenMenu.TabIndex = 0;
+            this.btnOpenMenu.Text = "Administrar Menu";
+            this.btnOpenMenu.UseVisualStyleBackColor = true;
+            this.btnOpenMenu.Click += new System.EventHandler(this.btnOpenMenu_Click);
+            // 
             // btnOpenBooking
             // 
             this.btnOpenBooking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnOpenBooking.Location = new System.Drawing.Point(3, 3);
             this.btnOpenBooking.Name = "btnOpenBooking";
-            this.btnOpenBooking.Size = new System.Drawing.Size(243, 24);
+            this.btnOpenBooking.Size = new System.Drawing.Size(181, 24);
             this.btnOpenBooking.TabIndex = 64;
             this.btnOpenBooking.Text = "Administrar Reservas";
             this.btnOpenBooking.UseVisualStyleBackColor = true;
@@ -89,9 +103,9 @@
             // btnOpenUsers
             // 
             this.btnOpenUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOpenUsers.Location = new System.Drawing.Point(252, 3);
+            this.btnOpenUsers.Location = new System.Drawing.Point(190, 3);
             this.btnOpenUsers.Name = "btnOpenUsers";
-            this.btnOpenUsers.Size = new System.Drawing.Size(243, 24);
+            this.btnOpenUsers.Size = new System.Drawing.Size(181, 24);
             this.btnOpenUsers.TabIndex = 65;
             this.btnOpenUsers.Text = "Administrar Usuarios";
             this.btnOpenUsers.UseVisualStyleBackColor = true;
@@ -105,12 +119,16 @@
             this.panelPadreAdmin.Size = new System.Drawing.Size(748, 422);
             this.panelPadreAdmin.TabIndex = 64;
             // 
-            // flowLayoutPanel1
+            // btnOpenPedidos
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(501, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 24);
-            this.flowLayoutPanel1.TabIndex = 66;
+            this.btnOpenPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOpenPedidos.Location = new System.Drawing.Point(564, 3);
+            this.btnOpenPedidos.Name = "btnOpenPedidos";
+            this.btnOpenPedidos.Size = new System.Drawing.Size(181, 24);
+            this.btnOpenPedidos.TabIndex = 0;
+            this.btnOpenPedidos.Text = "Administrar Pedidos";
+            this.btnOpenPedidos.UseVisualStyleBackColor = true;
+            this.btnOpenPedidos.Click += new System.EventHandler(this.btnOpenPedidos_Click);
             // 
             // Admin
             // 
@@ -137,6 +155,7 @@
         private System.Windows.Forms.Button btnOpenBooking;
         private System.Windows.Forms.Button btnOpenUsers;
         private System.Windows.Forms.Panel panelPadreAdmin;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnOpenMenu;
+        private System.Windows.Forms.Button btnOpenPedidos;
     }
 }

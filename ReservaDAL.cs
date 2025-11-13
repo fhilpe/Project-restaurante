@@ -74,7 +74,7 @@ namespace pruebadiseño
             List<Reserva> Lista = new List<Reserva>();
             using (SqlConnection conexion = General.obtenerConexion())
             {
-                string query = "SELECT * FROM reserva";  // No filtrar por cliente
+                string query = "SELECT id, nombre, celular, correo, cantidad_personas, fecha, hora, id_cliente, id_mesa FROM reserva";
                 SqlCommand comando = new SqlCommand(query, conexion);
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())

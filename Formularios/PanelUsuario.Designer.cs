@@ -30,22 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrarCuenta = new FontAwesome.Sharp.IconButton();
             this.idNameUser = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvReservasUsuario = new System.Windows.Forms.DataGridView();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cbBuscarPor = new System.Windows.Forms.ComboBox();
+            this.btnVerMenu = new System.Windows.Forms.Button();
+            this.btnVerPedidos = new System.Windows.Forms.Button();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarCuenta = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,22 +62,6 @@
             this.panel1.Size = new System.Drawing.Size(748, 50);
             this.panel1.TabIndex = 0;
             // 
-            // btnCerrarCuenta
-            // 
-            this.btnCerrarCuenta.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnCerrarCuenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrarCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnCerrarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarCuenta.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
-            this.btnCerrarCuenta.IconColor = System.Drawing.Color.Black;
-            this.btnCerrarCuenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarCuenta.Location = new System.Drawing.Point(700, 3);
-            this.btnCerrarCuenta.Name = "btnCerrarCuenta";
-            this.btnCerrarCuenta.Size = new System.Drawing.Size(45, 45);
-            this.btnCerrarCuenta.TabIndex = 6;
-            this.btnCerrarCuenta.UseVisualStyleBackColor = false;
-            this.btnCerrarCuenta.Click += new System.EventHandler(this.btnCerrarCuenta_Click);
-            // 
             // idNameUser
             // 
             this.idNameUser.AutoSize = true;
@@ -85,17 +71,6 @@
             this.idNameUser.Size = new System.Drawing.Size(98, 23);
             this.idNameUser.TabIndex = 1;
             this.idNameUser.Text = "Name User";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -146,32 +121,6 @@
             this.dgvReservasUsuario.Size = new System.Drawing.Size(563, 149);
             this.dgvReservasUsuario.TabIndex = 4;
             // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Regular;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(12, 339);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(50, 50);
-            this.iconButton1.TabIndex = 5;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscar.IconColor = System.Drawing.Color.Black;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnBuscar.IconSize = 30;
-            this.btnBuscar.Location = new System.Drawing.Point(75, 339);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(50, 50);
-            this.btnBuscar.TabIndex = 104;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(131, 342);
@@ -190,11 +139,96 @@
             this.cbBuscarPor.Size = new System.Drawing.Size(100, 21);
             this.cbBuscarPor.TabIndex = 105;
             // 
+            // btnVerMenu
+            // 
+            this.btnVerMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(38)))), ((int)(((byte)(186)))));
+            this.btnVerMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(76)))), ((int)(((byte)(137)))));
+            this.btnVerMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(115)))), ((int)(((byte)(225)))));
+            this.btnVerMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerMenu.Location = new System.Drawing.Point(16, 413);
+            this.btnVerMenu.Name = "btnVerMenu";
+            this.btnVerMenu.Size = new System.Drawing.Size(120, 33);
+            this.btnVerMenu.TabIndex = 114;
+            this.btnVerMenu.Text = "Ver el menu";
+            this.btnVerMenu.UseVisualStyleBackColor = true;
+            this.btnVerMenu.Click += new System.EventHandler(this.btnVerMenu_Click);
+            // 
+            // btnVerPedidos
+            // 
+            this.btnVerPedidos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(38)))), ((int)(((byte)(186)))));
+            this.btnVerPedidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(76)))), ((int)(((byte)(137)))));
+            this.btnVerPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(115)))), ((int)(((byte)(225)))));
+            this.btnVerPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerPedidos.Location = new System.Drawing.Point(164, 413);
+            this.btnVerPedidos.Name = "btnVerPedidos";
+            this.btnVerPedidos.Size = new System.Drawing.Size(120, 33);
+            this.btnVerPedidos.TabIndex = 115;
+            this.btnVerPedidos.Text = "Ver pedidos";
+            this.btnVerPedidos.UseVisualStyleBackColor = true;
+            this.btnVerPedidos.Click += new System.EventHandler(this.btnVerPedidos_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscar.IconColor = System.Drawing.Color.Black;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnBuscar.IconSize = 30;
+            this.btnBuscar.Location = new System.Drawing.Point(75, 339);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(50, 50);
+            this.btnBuscar.TabIndex = 104;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Regular;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(12, 339);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(50, 50);
+            this.iconButton1.TabIndex = 5;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // btnCerrarCuenta
+            // 
+            this.btnCerrarCuenta.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCerrarCuenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrarCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnCerrarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarCuenta.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.btnCerrarCuenta.IconColor = System.Drawing.Color.Black;
+            this.btnCerrarCuenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarCuenta.Location = new System.Drawing.Point(700, 3);
+            this.btnCerrarCuenta.Name = "btnCerrarCuenta";
+            this.btnCerrarCuenta.Size = new System.Drawing.Size(45, 45);
+            this.btnCerrarCuenta.TabIndex = 6;
+            this.btnCerrarCuenta.UseVisualStyleBackColor = false;
+            this.btnCerrarCuenta.Click += new System.EventHandler(this.btnCerrarCuenta_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // PanelUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 492);
+            this.Controls.Add(this.btnVerPedidos);
+            this.Controls.Add(this.btnVerMenu);
             this.Controls.Add(this.cbBuscarPor);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
@@ -208,9 +242,9 @@
             this.Load += new System.EventHandler(this.PanelUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +265,7 @@
         private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cbBuscarPor;
+        private System.Windows.Forms.Button btnVerMenu;
+        private System.Windows.Forms.Button btnVerPedidos;
     }
 }

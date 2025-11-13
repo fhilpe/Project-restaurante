@@ -52,5 +52,15 @@ namespace pruebadiseño.Formularios
             OpenChildFromAdmin(new AdminUsuarios());
 
         }
+
+        private void btnOpenMenu_Click(object sender, EventArgs e)
+        {
+            OpenChildFromAdmin(new MenuAdmin());
+        }
+
+        private void btnOpenPedidos_Click(object sender, EventArgs e)
+        {
+            OpenChildFromAdmin(new AdminPedidos());
+        }
     }
 }
