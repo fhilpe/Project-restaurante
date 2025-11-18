@@ -13,5 +13,6 @@ namespace pruebadiseño
         public string Correo { get; set; }
         public string Celular { get; set; }
         public string Contraseña { get; set; }
+        public string Imagen { get; set; }
     }
 }

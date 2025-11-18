@@ -80,6 +80,12 @@
     <Compile Include="Formularios\AdminUsuarios.Designer.cs">
       <DependentUpon>AdminUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarPerfil.Designer.cs">
+      <DependentUpon>EditarPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,12 @@
     <Compile Include="Formularios\MenuUsuario.Designer.cs">
       <DependentUpon>MenuUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\OlvidarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\OlvidarPassword.Designer.cs">
+      <DependentUpon>OlvidarPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\PanelUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     <Compile Include="Formularios\ReservaForm.Designer.cs">
       <DependentUpon>ReservaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\VerPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +175,9 @@
     <Compile Include="Reserva.cs" />
     <Compile Include="ReservaDAL.cs" />
     <Compile Include="Sesion.cs" />
+    <None Include="Resources\default-user.png" />
+    <None Include="Resources\Fondo_carta.jpeg" />
+    <None Include="Resources\carta_menu_fondo.png" />
     <None Include="Resources\default-food.png" />
     <None Include="Resources\images.jpg" />
     <None Include="Resources\images %282%291.jpg" />
@@ -179,6 +200,9 @@
     <EmbeddedResource Include="Formularios\AdminUsuarios.resx">
       <DependentUpon>AdminUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarPerfil.resx">
+      <DependentUpon>EditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +224,9 @@
     <EmbeddedResource Include="Formularios\MenuUsuario.resx">
       <DependentUpon>MenuUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\OlvidarPassword.resx">
+      <DependentUpon>OlvidarPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PanelUsuario.resx">
       <DependentUpon>PanelUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReservaForm.resx">
       <DependentUpon>ReservaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VerPedidos.resx">
       <DependentUpon>VerPedidos.cs</DependentUpon>

@@ -45,6 +45,7 @@ namespace pruebadiseño.Formularios
                 p.Precio = decimal.Parse(txtPrecio.Text);
                 p.Categoria = cbCategoria.Text;  // Usa Text
                 p.Disponible = chkDisponible.Checked;
+                p.Imagen = txtImagen.Text;
 
                 int result = ProductoDAL.AgregarProducto(p);
                 if (result > 0)
@@ -89,6 +90,7 @@ namespace pruebadiseño.Formularios
                 p.Precio = decimal.Parse(txtPrecio.Text);
                 p.Categoria = cbCategoria.Text;  // Usa Text
                 p.Disponible = chkDisponible.Checked;
+                p.Imagen = txtImagen.Text;
 
                 int result = ProductoDAL.ModificarProducto(p);
                 if (result > 0)

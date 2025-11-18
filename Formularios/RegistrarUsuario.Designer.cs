@@ -38,6 +38,8 @@
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new FontAwesome.Sharp.IconButton();
+            this.txtConfirmarPassword = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label7
@@ -125,7 +127,7 @@
             this.btnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnRegistrar.IconColor = System.Drawing.Color.Black;
             this.btnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRegistrar.Location = new System.Drawing.Point(47, 365);
+            this.btnRegistrar.Location = new System.Drawing.Point(47, 399);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(199, 34);
             this.btnRegistrar.TabIndex = 47;
@@ -133,11 +135,31 @@
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // txtConfirmarPassword
+            // 
+            this.txtConfirmarPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarPassword.Location = new System.Drawing.Point(47, 349);
+            this.txtConfirmarPassword.Name = "txtConfirmarPassword";
+            this.txtConfirmarPassword.PasswordChar = '*';
+            this.txtConfirmarPassword.Size = new System.Drawing.Size(199, 24);
+            this.txtConfirmarPassword.TabIndex = 49;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(44, 333);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 13);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Confirmar Contraseña";
+            // 
             // RegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 411);
+            this.ClientSize = new System.Drawing.Size(284, 449);
+            this.Controls.Add(this.txtConfirmarPassword);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtCelular);
@@ -171,5 +193,7 @@
         private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.TextBox txtPassword;
         private FontAwesome.Sharp.IconButton btnRegistrar;
+        private System.Windows.Forms.TextBox txtConfirmarPassword;
+        private System.Windows.Forms.Label label5;
     }
 }

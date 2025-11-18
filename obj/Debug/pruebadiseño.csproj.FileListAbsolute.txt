@@ -24,3 +24,6 @@ C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.Me
 C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.HacerPedido.resources
 C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.AdminPedidos.resources
 C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.VerPedidos.resources
+C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.EditarPerfil.resources
+C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.OlvidarPassword.resources
+C:\Users\luiss\source\repos\pruebadiseño\obj\Debug\pruebadiseño.Formularios.ResetPassword.resources

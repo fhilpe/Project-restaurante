@@ -35,6 +35,7 @@
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnLogin = new FontAwesome.Sharp.IconButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lnkOlvidar = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label7
@@ -107,11 +108,23 @@
             this.linkLabel1.Text = "Crear una cuenta";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // lnkOlvidar
+            // 
+            this.lnkOlvidar.AutoSize = true;
+            this.lnkOlvidar.Location = new System.Drawing.Point(287, 424);
+            this.lnkOlvidar.Name = "lnkOlvidar";
+            this.lnkOlvidar.Size = new System.Drawing.Size(131, 13);
+            this.lnkOlvidar.TabIndex = 41;
+            this.lnkOlvidar.TabStop = true;
+            this.lnkOlvidar.Text = "¿Olvidaste tu contraseña?";
+            this.lnkOlvidar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkOlvidar_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 492);
+            this.Controls.Add(this.lnkOlvidar);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtContraseña);
@@ -135,5 +148,6 @@
         private System.Windows.Forms.TextBox txtContraseña;
         private FontAwesome.Sharp.IconButton btnLogin;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lnkOlvidar;
     }
 }

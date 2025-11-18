@@ -56,10 +56,7 @@ namespace pruebadiseño
 
      
 
-        private void cbCategoria_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CargarMenu();
-        }
+        
 
         //                 txtNombre.Text = Convert.ToString(dgvMenu.CurrentRow.Cells["Nombre"].Value);
 
@@ -115,7 +112,12 @@ namespace pruebadiseño
             }
         }
 
-        
+        private void cbCategoria_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            CargarMenu();
+        }
+
+
 
         // fin
     }

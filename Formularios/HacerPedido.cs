@@ -97,19 +97,19 @@ namespace pruebadiseño.Formularios
             var dt = new System.Data.DataTable();
             dt.Columns.Add("Producto");
             dt.Columns.Add("Cantidad");
-            dt.Columns.Add("Precio Unitario");
-            dt.Columns.Add("Subtotal");
+            dt.Columns.Add("Precio");
+            //dt.Columns.Add("Subtotal");
             foreach (var item in carrito)
             {
                 var producto = ProductoDAL.MostrarProductos().Find(p => p.IdProducto == item.IdProducto);
                 if (producto != null)
                 {
-                    dt.Rows.Add(producto.Nombre, item.Cantidad, item.PrecioUnitario, item.Cantidad * item.PrecioUnitario);
+                    dt.Rows.Add(producto.Nombre, item.Cantidad, item.PrecioUnitario /*item.Cantidad * item.PrecioUnitario*/);
                 }
             }
             dgvCarrito.DataSource = dt;
             total = carrito.Sum(d => d.Cantidad * d.PrecioUnitario);
-            lblTotal.Text = $"Total: {total}$";
+            lblTotal.Text = $"${total}";
         }
 
         private void cbTipoPedido_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,6 +127,11 @@ namespace pruebadiseño.Formularios
                 cbMesa.DisplayMember = "NumeroMesa";
                 cbMesa.ValueMember = "IdMesa";
             }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarCarrito();
         }
 
 

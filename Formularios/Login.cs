@@ -73,5 +73,10 @@ namespace pruebadiseño
             RegistrarUsuario registrarUsuario = new RegistrarUsuario();
             registrarUsuario.Show();
         }
+
+        private void lnkOlvidar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new OlvidarPassword().Show();
+        }
     }
 }

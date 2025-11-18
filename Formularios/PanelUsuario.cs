@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,7 +33,38 @@ namespace pruebadiseño.Formularios
                 idNameUser.Text = "Usuario no identificado";
                 dgvReservasUsuario.Visible = false;
             }
+            CargarImagenPerfil();
         }
+
+        private void CargarImagenPerfil()
+        {
+            var cliente = ClienteDAL.MostrarClientes().Find(c => c.IdCliente == Sesion.IdCliente);
+            if (cliente != null && !string.IsNullOrEmpty(cliente.Imagen))
+            {
+                try
+                {
+                    using (WebClient wc = new WebClient())
+                    {
+                        byte[] bytes = wc.DownloadData(cliente.Imagen);
+                        using (var ms = new System.IO.MemoryStream(bytes))
+                        {
+                            pbPerfil.Image = System.Drawing.Image.FromStream(ms);
+                        }
+                    }
+                }
+                catch
+                {
+                    pbPerfil.Image = Properties.Resources.default_user;
+                }
+            }
+            else
+            {
+                pbPerfil.Image = Properties.Resources.default_user;
+            }
+        }
+
+
+
 
         private void CargarReservasUsuario()
         {
@@ -81,6 +113,13 @@ namespace pruebadiseño.Formularios
         {
             this.Hide();
             mainForm.OpenChildFrom(new VerPedidos());
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            EditarPerfil editar = new EditarPerfil();
+            this.Hide();
+            editar.Show();
         }
     }
 }

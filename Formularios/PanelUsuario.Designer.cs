@@ -43,23 +43,24 @@
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnCerrarCuenta = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnPerfil = new FontAwesome.Sharp.IconButton();
+            this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Controls.Add(this.btnCerrarCuenta);
+            this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.idNameUser);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbPerfil);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 50);
+            this.panel1.Size = new System.Drawing.Size(764, 68);
             this.panel1.TabIndex = 0;
             // 
             // idNameUser
@@ -74,12 +75,14 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnCerrarCuenta);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(0, 68);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(748, 25);
+            this.panel2.Size = new System.Drawing.Size(764, 21);
             this.panel2.TabIndex = 1;
             // 
             // button1
@@ -87,7 +90,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Left;
             this.button1.Location = new System.Drawing.Point(75, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 25);
+            this.button1.Size = new System.Drawing.Size(96, 21);
             this.button1.TabIndex = 2;
             this.button1.Text = "Ver reservas";
             this.button1.UseVisualStyleBackColor = true;
@@ -98,7 +101,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(75, 25);
+            this.panel3.Size = new System.Drawing.Size(75, 21);
             this.panel3.TabIndex = 3;
             // 
             // label1
@@ -197,36 +200,57 @@
             // 
             // btnCerrarCuenta
             // 
-            this.btnCerrarCuenta.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCerrarCuenta.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCerrarCuenta.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCerrarCuenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrarCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnCerrarCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.btnCerrarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarCuenta.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.btnCerrarCuenta.IconChar = FontAwesome.Sharp.IconChar.Lock;
             this.btnCerrarCuenta.IconColor = System.Drawing.Color.Black;
             this.btnCerrarCuenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarCuenta.Location = new System.Drawing.Point(700, 3);
+            this.btnCerrarCuenta.IconSize = 16;
+            this.btnCerrarCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarCuenta.Location = new System.Drawing.Point(669, 0);
             this.btnCerrarCuenta.Name = "btnCerrarCuenta";
-            this.btnCerrarCuenta.Size = new System.Drawing.Size(45, 45);
+            this.btnCerrarCuenta.Size = new System.Drawing.Size(95, 21);
             this.btnCerrarCuenta.TabIndex = 6;
+            this.btnCerrarCuenta.Text = "Cerra Sesion";
+            this.btnCerrarCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrarCuenta.UseVisualStyleBackColor = false;
             this.btnCerrarCuenta.Click += new System.EventHandler(this.btnCerrarCuenta_Click);
             // 
-            // pictureBox1
+            // btnPerfil
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            this.btnPerfil.IconColor = System.Drawing.Color.Black;
+            this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPerfil.IconSize = 30;
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(683, 12);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(69, 35);
+            this.btnPerfil.TabIndex = 116;
+            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            // 
+            // pbPerfil
+            // 
+            this.pbPerfil.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbPerfil.Image = ((System.Drawing.Image)(resources.GetObject("pbPerfil.Image")));
+            this.pbPerfil.Location = new System.Drawing.Point(0, 0);
+            this.pbPerfil.Name = "pbPerfil";
+            this.pbPerfil.Size = new System.Drawing.Size(75, 68);
+            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPerfil.TabIndex = 1;
+            this.pbPerfil.TabStop = false;
             // 
             // PanelUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 492);
+            this.ClientSize = new System.Drawing.Size(764, 492);
             this.Controls.Add(this.btnVerPedidos);
             this.Controls.Add(this.btnVerMenu);
             this.Controls.Add(this.cbBuscarPor);
@@ -244,7 +268,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,7 +277,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.Label idNameUser;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
@@ -267,5 +291,6 @@
         private System.Windows.Forms.ComboBox cbBuscarPor;
         private System.Windows.Forms.Button btnVerMenu;
         private System.Windows.Forms.Button btnVerPedidos;
+        private FontAwesome.Sharp.IconButton btnPerfil;
     }
 }

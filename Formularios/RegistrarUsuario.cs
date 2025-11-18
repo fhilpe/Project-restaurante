@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace pruebadiseño.Formularios  
+namespace pruebadiseño.Formularios
 {
     public partial class RegistrarUsuario : Form
     {
@@ -17,16 +19,38 @@ namespace pruebadiseño.Formularios
             string correo = txtCorreo.Text.Trim();
             string celular = txtCelular.Text.Trim();
             string password = txtPassword.Text.Trim();
+            string confirmarPassword = txtConfirmarPassword.Text.Trim();
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(celular) || string.IsNullOrEmpty(password))
+            // Validaciones básicas
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(correo) ||
+                string.IsNullOrWhiteSpace(celular) || string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(confirmarPassword))
             {
                 MessageBox.Show("Por favor complete todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (!correo.Contains("@") || !correo.Contains("."))
+
+            string patronCorreo = @"^[^@\s]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$";
+            // Validar formato de correo
+            if (!Regex.IsMatch(correo, patronCorreo))
             {
-                MessageBox.Show("Ingrese un correo electrónico válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese un correo electrónico válido.", "Advertencia",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validar contraseña fuerte
+            if (!ValidarContraseña(password))
+            {
+                MessageBox.Show("La contraseña debe tener al menos 8 caracteres, con mayúsculas, minúsculas y números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar confirmación de contraseña
+            if (password != confirmarPassword)
+            {
+                MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -51,7 +75,7 @@ namespace pruebadiseño.Formularios
                     cmdInsertar.Parameters.AddWithValue("@nombre", nombre);
                     cmdInsertar.Parameters.AddWithValue("@correo", correo);
                     cmdInsertar.Parameters.AddWithValue("@celular", celular);
-                    cmdInsertar.Parameters.AddWithValue("@contraseña", password);  
+                    cmdInsertar.Parameters.AddWithValue("@contraseña", password);
 
                     int filasAfectadas = cmdInsertar.ExecuteNonQuery();
 
@@ -63,6 +87,7 @@ namespace pruebadiseño.Formularios
                         txtCorreo.Clear();
                         txtCelular.Clear();
                         txtPassword.Clear();
+                        txtConfirmarPassword.Clear();
                         //this.Close();
                     }
                     else
@@ -75,6 +100,11 @@ namespace pruebadiseño.Formularios
             {
                 MessageBox.Show("Error al registrar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool ValidarContraseña(string pass)
+        {
+            return pass.Length >= 8 && pass.Any(char.IsUpper) && pass.Any(char.IsLower) && pass.Any(char.IsDigit);
         }
     }
 }

@@ -63,9 +63,29 @@ namespace pruebadiseño.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carta_menu_fondo {
+            get {
+                object obj = ResourceManager.GetObject("carta_menu_fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap default_food {
             get {
                 object obj = ResourceManager.GetObject("default_food", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap default_user {
+            get {
+                object obj = ResourceManager.GetObject("default_user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

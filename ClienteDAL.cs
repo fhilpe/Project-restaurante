@@ -19,6 +19,7 @@ namespace pruebadiseño
                 cmd.Parameters.AddWithValue("@c", cliente.Correo);
                 cmd.Parameters.AddWithValue("@ce", cliente.Celular);
                 cmd.Parameters.AddWithValue("@p", cliente.Contraseña);
+                cmd.Parameters.AddWithValue("@img", cliente.Imagen ?? (object)DBNull.Value);
                 return cmd.ExecuteNonQuery();
             }
         }
@@ -28,7 +29,7 @@ namespace pruebadiseño
             List<Cliente> lista = new List<Cliente>();
             using (SqlConnection c = General.obtenerConexion())
             {
-                string q = "SELECT id_cliente, nombre, correo, celular, contraseña FROM cliente";
+                string q = "SELECT id_cliente, nombre, correo, celular, contraseña, imagen FROM cliente";
                 SqlCommand cmd = new SqlCommand(q, c);
                 SqlDataReader r = cmd.ExecuteReader();
                 while (r.Read())
@@ -39,7 +40,8 @@ namespace pruebadiseño
                         Nombre = r.GetString(1),
                         Correo = r.GetString(2),
                         Celular = r.GetString(3),
-                        Contraseña = r.GetString(4)
+                        Contraseña = r.GetString(4),
+                        Imagen = r.IsDBNull(5) ? null : r.GetString(5)
                     });
                 }
             }
@@ -50,16 +52,26 @@ namespace pruebadiseño
         {
             using (SqlConnection c = General.obtenerConexion())
             {
-                string q = "UPDATE cliente SET nombre=@n, correo=@c, celular=@ce, contraseña=@p WHERE id_cliente=@id";
+                string q = "UPDATE cliente SET nombre=@n, celular=@ce, imagen=@img";
+                if (!string.IsNullOrEmpty(cliente.Contraseña))
+                {
+                    q += ", contraseña=@p";
+                }
+                q += " WHERE id_cliente=@id";
+
                 SqlCommand cmd = new SqlCommand(q, c);
                 cmd.Parameters.AddWithValue("@n", cliente.Nombre);
-                cmd.Parameters.AddWithValue("@c", cliente.Correo);
                 cmd.Parameters.AddWithValue("@ce", cliente.Celular);
-                cmd.Parameters.AddWithValue("@p", cliente.Contraseña);
+                cmd.Parameters.AddWithValue("@img", cliente.Imagen ?? (object)DBNull.Value);
+                if (!string.IsNullOrEmpty(cliente.Contraseña))
+                {
+                    cmd.Parameters.AddWithValue("@p", cliente.Contraseña);
+                }
                 cmd.Parameters.AddWithValue("@id", cliente.IdCliente);
                 return cmd.ExecuteNonQuery();
             }
         }
+
 
         public static int EliminarCliente(int id)
         {
@@ -82,15 +94,15 @@ namespace pruebadiseño
                 string q = "";
                 if (criterio == "Nombre")
                 {
-                    q = "SELECT id_cliente, nombre, correo, celular, contraseña FROM cliente WHERE nombre LIKE @valor";
+                    q = "SELECT id_cliente, nombre, correo, celular, contraseña, imagen FROM cliente WHERE nombre LIKE @valor";
                 }
                 else if (criterio == "Correo")
                 {
-                    q = "SELECT id_cliente, nombre, correo, celular, contraseña FROM cliente WHERE correo LIKE @valor";
+                    q = "SELECT id_cliente, nombre, correo, celular, contraseña, imagen FROM cliente WHERE correo LIKE @valor";
                 }
                 else if (criterio == "Celular")
                 {
-                    q = "SELECT id_cliente, nombre, correo, celular, contraseña FROM cliente WHERE celular LIKE @valor";
+                    q = "SELECT id_cliente, nombre, correo, celular, contraseña, imagen FROM cliente WHERE celular LIKE @valor";
                 }
                 SqlCommand cmd = new SqlCommand(q, c);
                 cmd.Parameters.AddWithValue("@valor", "%" + valor + "%");
@@ -103,7 +115,8 @@ namespace pruebadiseño
                         Nombre = r.GetString(1),
                         Correo = r.GetString(2),
                         Celular = r.GetString(3),
-                        Contraseña = r.GetString(4)
+                        Contraseña = r.GetString(4),
+                        Imagen = r.IsDBNull(5) ? null : r.GetString(5)
                     });
                 }
             }

@@ -39,9 +39,11 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.btnIrCarrito = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -74,7 +76,7 @@
             this.btnAgregarPedido.Name = "btnAgregarPedido";
             this.btnAgregarPedido.Size = new System.Drawing.Size(128, 32);
             this.btnAgregarPedido.TabIndex = 115;
-            this.btnAgregarPedido.Text = "Agregar Pedido";
+            this.btnAgregarPedido.Text = "Agregar al carrito";
             this.btnAgregarPedido.UseVisualStyleBackColor = true;
             this.btnAgregarPedido.Click += new System.EventHandler(this.btnAgregarPedido_Click);
             // 
@@ -82,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(241, 18);
@@ -102,10 +104,12 @@
             // 
             // cbCategoria
             // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(3, 21);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(159, 21);
+            this.cbCategoria.Size = new System.Drawing.Size(159, 24);
             this.cbCategoria.TabIndex = 0;
             this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
@@ -121,10 +125,11 @@
             // 
             // rtbDescripcion
             // 
-            this.rtbDescripcion.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.rtbDescripcion.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.rtbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbDescripcion.Location = new System.Drawing.Point(391, 336);
+            this.rtbDescripcion.ForeColor = System.Drawing.SystemColors.Menu;
+            this.rtbDescripcion.Location = new System.Drawing.Point(22, 292);
             this.rtbDescripcion.Name = "rtbDescripcion";
             this.rtbDescripcion.ReadOnly = true;
             this.rtbDescripcion.Size = new System.Drawing.Size(158, 66);
@@ -133,9 +138,11 @@
             // 
             // txtPrecio
             // 
+            this.txtPrecio.BackColor = System.Drawing.SystemColors.ControlText;
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(555, 336);
+            this.txtPrecio.ForeColor = System.Drawing.Color.Yellow;
+            this.txtPrecio.Location = new System.Drawing.Point(186, 316);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.ReadOnly = true;
             this.txtPrecio.Size = new System.Drawing.Size(80, 15);
@@ -143,16 +150,19 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(391, 283);
+            this.txtNombre.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtNombre.Location = new System.Drawing.Point(22, 267);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(244, 17);
             this.txtNombre.TabIndex = 8;
             // 
             // pbImagen
             // 
-            this.pbImagen.Location = new System.Drawing.Point(391, 116);
+            this.pbImagen.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbImagen.Location = new System.Drawing.Point(22, 100);
             this.pbImagen.Name = "pbImagen";
             this.pbImagen.Size = new System.Drawing.Size(244, 154);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -166,7 +176,7 @@
             this.btnIrCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(115)))), ((int)(((byte)(225)))));
             this.btnIrCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIrCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrCarrito.Location = new System.Drawing.Point(16, 442);
+            this.btnIrCarrito.Location = new System.Drawing.Point(19, 442);
             this.btnIrCarrito.Name = "btnIrCarrito";
             this.btnIrCarrito.Size = new System.Drawing.Size(128, 32);
             this.btnIrCarrito.TabIndex = 116;
@@ -174,16 +184,26 @@
             this.btnIrCarrito.UseVisualStyleBackColor = true;
             this.btnIrCarrito.Click += new System.EventHandler(this.btnIrCarrito_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::pruebadiseño.Properties.Resources.carta_menu_fondo;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pbImagen);
+            this.panel1.Controls.Add(this.rtbDescripcion);
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.txtPrecio);
+            this.panel1.Location = new System.Drawing.Point(369, 57);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(288, 405);
+            this.panel1.TabIndex = 117;
+            // 
             // MenuUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 492);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnIrCarrito);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.rtbDescripcion);
-            this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MenuUsuario";
@@ -193,6 +213,8 @@
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +233,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnIrCarrito;
+        private System.Windows.Forms.Panel panel1;
     }
 }
