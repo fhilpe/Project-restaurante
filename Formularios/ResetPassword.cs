@@ -110,6 +110,17 @@ namespace pruebadiseño.Formularios
             return pass.Length >= 8 && pass.Any(char.IsUpper) && pass.Any(char.IsLower) && pass.Any(char.IsDigit);
         }
 
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtNuevaPassword.PasswordChar = chkShowPassword.Checked ? '\0' : '*';
+            txtConfirmarPassword.PasswordChar = chkShowPassword.Checked ? '\0' : '*';
+        }
+
+
+
+
+
+
         // fin
     }
 }

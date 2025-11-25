@@ -78,5 +78,15 @@ namespace pruebadiseño
         {
             new OlvidarPassword().Show();
         }
+
+        
+        // Mostras/Ocultar contraseña
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtContraseña.PasswordChar = chkShowPassword.Checked ? '\0' : '*';
+        }
+
+
+        // fin
     }
 }

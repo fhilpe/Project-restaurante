@@ -36,6 +36,7 @@
             this.btnLogin = new FontAwesome.Sharp.IconButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lnkOlvidar = new System.Windows.Forms.LinkLabel();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label7
@@ -89,7 +90,7 @@
             this.btnLogin.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLogin.IconColor = System.Drawing.Color.Black;
             this.btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLogin.Location = new System.Drawing.Point(258, 319);
+            this.btnLogin.Location = new System.Drawing.Point(258, 335);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(199, 33);
             this.btnLogin.TabIndex = 30;
@@ -100,7 +101,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(310, 391);
+            this.linkLabel1.Location = new System.Drawing.Point(310, 407);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(89, 13);
             this.linkLabel1.TabIndex = 40;
@@ -111,7 +112,7 @@
             // lnkOlvidar
             // 
             this.lnkOlvidar.AutoSize = true;
-            this.lnkOlvidar.Location = new System.Drawing.Point(287, 424);
+            this.lnkOlvidar.Location = new System.Drawing.Point(287, 440);
             this.lnkOlvidar.Name = "lnkOlvidar";
             this.lnkOlvidar.Size = new System.Drawing.Size(131, 13);
             this.lnkOlvidar.TabIndex = 41;
@@ -119,11 +120,23 @@
             this.lnkOlvidar.Text = "¿Olvidaste tu contraseña?";
             this.lnkOlvidar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkOlvidar_LinkClicked);
             // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.AutoSize = true;
+            this.chkShowPassword.Location = new System.Drawing.Point(258, 288);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(118, 17);
+            this.chkShowPassword.TabIndex = 43;
+            this.chkShowPassword.Text = "Mostrar Contraseña";
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 492);
+            this.Controls.Add(this.chkShowPassword);
             this.Controls.Add(this.lnkOlvidar);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnLogin);
@@ -149,5 +162,6 @@
         private FontAwesome.Sharp.IconButton btnLogin;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel lnkOlvidar;
+        private System.Windows.Forms.CheckBox chkShowPassword;
     }
 }

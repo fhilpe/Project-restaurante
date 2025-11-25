@@ -40,6 +40,7 @@
             this.btnRegistrar = new FontAwesome.Sharp.IconButton();
             this.txtConfirmarPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label7
@@ -127,7 +128,7 @@
             this.btnRegistrar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnRegistrar.IconColor = System.Drawing.Color.Black;
             this.btnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRegistrar.Location = new System.Drawing.Point(47, 399);
+            this.btnRegistrar.Location = new System.Drawing.Point(47, 422);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(199, 34);
             this.btnRegistrar.TabIndex = 47;
@@ -153,11 +154,23 @@
             this.label5.TabIndex = 48;
             this.label5.Text = "Confirmar Contraseña";
             // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.AutoSize = true;
+            this.chkShowPassword.Location = new System.Drawing.Point(47, 379);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(118, 17);
+            this.chkShowPassword.TabIndex = 50;
+            this.chkShowPassword.Text = "Mostrar Contraseña";
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
+            // 
             // RegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 449);
+            this.ClientSize = new System.Drawing.Size(284, 468);
+            this.Controls.Add(this.chkShowPassword);
             this.Controls.Add(this.txtConfirmarPassword);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnRegistrar);
@@ -195,5 +208,6 @@
         private FontAwesome.Sharp.IconButton btnRegistrar;
         private System.Windows.Forms.TextBox txtConfirmarPassword;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox chkShowPassword;
     }
 }

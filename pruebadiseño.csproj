@@ -175,6 +175,8 @@
     <Compile Include="Reserva.cs" />
     <Compile Include="ReservaDAL.cs" />
     <Compile Include="Sesion.cs" />
+    <None Include="Resources\hide.png" />
+    <None Include="Resources\show.png" />
     <None Include="Resources\default-user.png" />
     <None Include="Resources\Fondo_carta.jpeg" />
     <None Include="Resources\carta_menu_fondo.png" />

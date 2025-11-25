@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtConfirmarPassword = new System.Windows.Forms.TextBox();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtCodigo
@@ -57,12 +58,13 @@
             // 
             this.txtNuevaPassword.Location = new System.Drawing.Point(216, 204);
             this.txtNuevaPassword.Name = "txtNuevaPassword";
-            this.txtNuevaPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtNuevaPassword.PasswordChar = '*';
+            this.txtNuevaPassword.Size = new System.Drawing.Size(148, 20);
             this.txtNuevaPassword.TabIndex = 2;
             // 
             // btnCambiar
             // 
-            this.btnCambiar.Location = new System.Drawing.Point(216, 349);
+            this.btnCambiar.Location = new System.Drawing.Point(216, 353);
             this.btnCambiar.Name = "btnCambiar";
             this.btnCambiar.Size = new System.Drawing.Size(128, 53);
             this.btnCambiar.TabIndex = 3;
@@ -92,14 +94,27 @@
             // 
             this.txtConfirmarPassword.Location = new System.Drawing.Point(216, 280);
             this.txtConfirmarPassword.Name = "txtConfirmarPassword";
-            this.txtConfirmarPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtConfirmarPassword.PasswordChar = '*';
+            this.txtConfirmarPassword.Size = new System.Drawing.Size(148, 20);
             this.txtConfirmarPassword.TabIndex = 5;
+            // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.AutoSize = true;
+            this.chkShowPassword.Location = new System.Drawing.Point(216, 306);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(118, 17);
+            this.chkShowPassword.TabIndex = 7;
+            this.chkShowPassword.Text = "Mostrar Contraseña";
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
             // ResetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 492);
+            this.Controls.Add(this.chkShowPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtConfirmarPassword);
             this.Controls.Add(this.label2);
@@ -123,5 +138,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtConfirmarPassword;
+        private System.Windows.Forms.CheckBox chkShowPassword;
     }
 }

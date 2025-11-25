@@ -34,18 +34,6 @@ namespace pruebadiseño.Formularios
             ActualizarCarrito();
         }
 
-        private void btnAgregarPlato_Click(object sender, EventArgs e)
-        {
-            // Abre MenuUsuario para seleccionar plato
-            MenuUsuario menu = new MenuUsuario();
-            if (menu.ShowDialog() == DialogResult.OK)
-            {
-                // Asume que MenuUsuario tiene propiedad para devolver plato seleccionado
-                // Por simplicidad, agrega manualmente o integra
-                MessageBox.Show("Integra selección de plato aquí.");
-            }
-        }
-
         private void btnQuitarPlato_Click(object sender, EventArgs e)
         {
             if (dgvCarrito.SelectedRows.Count > 0)

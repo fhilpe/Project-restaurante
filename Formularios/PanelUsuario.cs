@@ -117,8 +117,10 @@ namespace pruebadiseño.Formularios
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
+            btnPerfil.Enabled = false;    
+
             EditarPerfil editar = new EditarPerfil();
-            this.Hide();
+            editar.FormClosed += (s, args) => btnPerfil.Enabled = true; 
             editar.Show();
         }
     }

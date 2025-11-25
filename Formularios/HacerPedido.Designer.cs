@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvCarrito = new System.Windows.Forms.DataGridView();
-            this.btnAgregarPlato = new System.Windows.Forms.Button();
             this.btnQuitarPlato = new System.Windows.Forms.Button();
             this.btnConfirmarPedido = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -53,22 +52,6 @@
             this.dgvCarrito.Size = new System.Drawing.Size(343, 187);
             this.dgvCarrito.TabIndex = 0;
             // 
-            // btnAgregarPlato
-            // 
-            this.btnAgregarPlato.BackColor = System.Drawing.Color.White;
-            this.btnAgregarPlato.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(38)))), ((int)(((byte)(186)))));
-            this.btnAgregarPlato.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(131)))), ((int)(((byte)(30)))));
-            this.btnAgregarPlato.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(204)))), ((int)(((byte)(64)))));
-            this.btnAgregarPlato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarPlato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarPlato.Location = new System.Drawing.Point(12, 296);
-            this.btnAgregarPlato.Name = "btnAgregarPlato";
-            this.btnAgregarPlato.Size = new System.Drawing.Size(112, 31);
-            this.btnAgregarPlato.TabIndex = 73;
-            this.btnAgregarPlato.Text = "Agregar Plato";
-            this.btnAgregarPlato.UseVisualStyleBackColor = false;
-            this.btnAgregarPlato.Click += new System.EventHandler(this.btnAgregarPlato_Click);
-            // 
             // btnQuitarPlato
             // 
             this.btnQuitarPlato.BackColor = System.Drawing.Color.White;
@@ -78,7 +61,7 @@
             this.btnQuitarPlato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitarPlato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarPlato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnQuitarPlato.Location = new System.Drawing.Point(143, 296);
+            this.btnQuitarPlato.Location = new System.Drawing.Point(13, 299);
             this.btnQuitarPlato.Name = "btnQuitarPlato";
             this.btnQuitarPlato.Size = new System.Drawing.Size(121, 31);
             this.btnQuitarPlato.TabIndex = 74;
@@ -94,7 +77,7 @@
             this.btnConfirmarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(204)))), ((int)(((byte)(64)))));
             this.btnConfirmarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmarPedido.Location = new System.Drawing.Point(281, 296);
+            this.btnConfirmarPedido.Location = new System.Drawing.Point(151, 299);
             this.btnConfirmarPedido.Name = "btnConfirmarPedido";
             this.btnConfirmarPedido.Size = new System.Drawing.Size(132, 31);
             this.btnConfirmarPedido.TabIndex = 75;
@@ -187,7 +170,7 @@
             this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(115)))), ((int)(((byte)(225)))));
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(433, 294);
+            this.btnActualizar.Location = new System.Drawing.Point(303, 297);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(118, 33);
             this.btnActualizar.TabIndex = 114;
@@ -212,7 +195,6 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnConfirmarPedido);
             this.Controls.Add(this.btnQuitarPlato);
-            this.Controls.Add(this.btnAgregarPlato);
             this.Controls.Add(this.dgvCarrito);
             this.Name = "HacerPedido";
             this.Text = "HacerPedido";
@@ -226,7 +208,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvCarrito;
-        private System.Windows.Forms.Button btnAgregarPlato;
         private System.Windows.Forms.Button btnQuitarPlato;
         private System.Windows.Forms.Button btnConfirmarPedido;
         private System.Windows.Forms.Label lblTotal;

@@ -142,8 +142,10 @@ namespace pruebadiseño.Formularios
 
         private void btnIrCarrito_Click(object sender, EventArgs e)
         {
+            btnIrCarrito.Enabled = false;  
+
             HacerPedido hacerPedido = new HacerPedido();
-            this.Hide();
+            hacerPedido.FormClosed += (s, args) => btnIrCarrito.Enabled = true; 
             hacerPedido.Show();
         }
 
